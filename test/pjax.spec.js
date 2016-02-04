@@ -55,6 +55,11 @@ describe('PJAX Page', function() {
         });
 
         /*
+        // body > div.navbar.navbar-default.navbar-static-top > ul > li:nth-child(3) > a
+        // http://localhost:8000/page2.php
+
+        // body > div.navbar.navbar-default.navbar-static-top > ul > li:nth-child(4) > a
+        // http://localhost:8000/page3.php?test=test
         it('should click', function(done) {
             browser.clickLink('body > div.navbar.navbar-default.navbar-static-top > ul > li:nth-child(2) > a', function(){
                     console.log('link followed');
@@ -65,11 +70,6 @@ describe('PJAX Page', function() {
         });
         */
 
-        it('should cause no errors', function(done) {
-            console.log(browser.errors);
-            assert.equal( browser.errors.length, 0);
-            done();
-        });
-
     });
 });
+
