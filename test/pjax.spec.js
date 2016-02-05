@@ -5,7 +5,6 @@ if (!shelljs.which('php')) {
     process.exit(1);
 }
 
-
 var child = shelljs.exec('php -S 0.0.0.0:8000 -c test/php.ini -t test', {async:true});
 child.stdout.on('data', function(data) {
     console.log(data);
@@ -13,7 +12,6 @@ child.stdout.on('data', function(data) {
 child.stderr.on('data', function(data) {
     console.error(data);
 });
-
 
 var Browser = require('zombie');
 var assert  = require('assert');
